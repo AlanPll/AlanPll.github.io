@@ -22,7 +22,7 @@ author: Some Person
 navbar-links:
   About Me: "aboutme"
   Exercices :
-    - Terminale Spécialité : "alanpll.github.io/TleSpe.md"
+    - Terminale Spécialité : "TleSpe.md"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://deanattali.com"
 
