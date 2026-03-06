@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Exercices d'entraînement
+subtitle: Exercices d'entraînement
 ---
 
 <details>
-<summary>1er exercice</summary>
+<summary>Étudier les variations et la convexité de la fonction définie sur $\mathbb{R}$ par $f(x)=x\exp{x^2}$.</summary>
 <br>
 Solution.
 </details>
