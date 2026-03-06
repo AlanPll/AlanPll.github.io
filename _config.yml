@@ -13,7 +13,7 @@
 title: Page personnelle
 
 # Your name to show in the footer
-author: Some Person
+author: Alan Pellé
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -117,10 +117,10 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # Add a search button to the navbar
-post_search: true
+# post_search: true
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
-edit_page_button: true
+# edit_page_button: true
 
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
