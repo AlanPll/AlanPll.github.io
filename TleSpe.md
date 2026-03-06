@@ -6,5 +6,6 @@ mathjax: true
 
 Étudier les variations et la convexité de la fonction définie sur \\(\mathbb{R}\\) par \\(f(x)=x\exp{x^2}\\).
 <details>
-<summary>Solution. \\(\pi\\).</summary>
+<summary>Solution.</summary>
+\\(\pi\\).
 </details>
