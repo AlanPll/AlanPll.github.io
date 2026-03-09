@@ -5,7 +5,8 @@ mathjax: true
 ---
 
 Étudier les variations et la convexité de la fonction définie sur \\(\mathbb{R}\\) par \\(f(x)=x\exp{x^2}\\).
-<details>
-<summary>Solution.</summary>
-\\(\pi\\).
-</details>
+[details="test"]
+$$
+x^2 + y^2 = z^2
+$$
+[/details]
