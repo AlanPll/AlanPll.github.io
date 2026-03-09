@@ -8,7 +8,5 @@ mathjax: true
 <details><summary>Solution</summary>
 
 On a :
-\\(
-x^2 + y^2 = z^2
-\\)
+$$ x^2 + y^2 = z^2 $$
 </details>
