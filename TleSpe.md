@@ -11,7 +11,7 @@ mathjax: true
 
 On détermine les limites de \(f\) aux bornes de son ensemble de définition par composées et produits de foncitons usuelles. On obtient :
 
-$$\lim_{x \to -\infty} f(x)=-\infty et \lim_{x \to +\infty} f(x)=+\infty $$.
+$$\lim_{x \to -\infty} f(x)=-\infty \text{et} \lim_{x \to +\infty} f(x)=+\infty $$.
 
 D'autre part la fonction \(f\) est dérivable sur \(\mathbb{R}\) comme produit et composée de fonctions dérivables sur \(\mathbb{R}\) et, pour tout réel \(x\), on a :
 
@@ -22,6 +22,12 @@ Puisque pour tout \(x \in \mathbb{R}\) on a \(e^{x^2} >0\) et \(2x^2+1 >0\), on 
 
 <center><IMG src="/assets/img/var_ex1.png"  alt="Var.png"/></center>
 
+
+On détermine la convexité de \(f\) en étudiant le signe de sa dérivée seconde \(f''\). La fonction \(f\) est deux fois dérivable et pour tout réel \(x\), on a :
+
+$$f''(x)=2x(2x^2+3)\e^{x^2}.$$
+
+Le signe de \(f''(x)\) sur \(\mathbb{R}\) étant déterminé par celui de \(2x\), on en déduit son tableau de signes :
 
 
 </details>
