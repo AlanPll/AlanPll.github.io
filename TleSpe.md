@@ -30,6 +30,10 @@ $$f''(x)=2x(2x^2+3)\e^{x^2}.$$
 Le signe de \(f''(x)\) sur \(\mathbb{R}\) étant déterminé par celui de \(2x\), on en déduit son tableau de signes :
 
 
+<center><IMG src="/assets/img/ex1_2.png"  alt="Conv.png"/></center>
+
+
+Finalement la fonction \(f\) est concave sur \(]-\infty ; 0[\) et convexe sur \(]0;+\infty[\). La courbe représentative de \(f\) admet un point d'inflexion en son point d'abscisse 0.
 </details>
 
 
