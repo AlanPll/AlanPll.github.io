@@ -42,7 +42,7 @@ Finalement la fonction \(f\) est concave sur \(]-\infty ; 0[\) et convexe sur \(
 <details class="style-2"><summary>Solution</summary>
 </details>
 
-<p class=solid> Montrer que l'équation \(f(x)=x\ln(x^2+1)=-5\) admet une solution unique sur \(\mathbb{R}\).</p>
+<p class=solid> Montrer que l'équation \(x\ln(x^2+1)=-5\) admet une solution unique sur \(\mathbb{R}\).</p>
 
 
 <details class="style-2"><summary>Solution</summary>
