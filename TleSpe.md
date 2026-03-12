@@ -36,7 +36,7 @@ Le signe de \(f''(x)\) sur \(\mathbb{R}\) étant déterminé par celui de \(2x\)
 Finalement la fonction \(f\) est concave sur \(]-\infty ; 0[\) et convexe sur \(]0;+\infty[\). La courbe représentative de \(f\) admet un point d'inflexion en son point d'abscisse 0.
 </details>
 
-<p class=solid> Étudier les variations et la convexité, de la fonction \(f\) définie sur \(]-\infty ; 2[ \cup ]2 ; +\infty[\) par \(f(x)=\dfrac{2x-1}{x+3}\). Donner les équations des asymptotes à sa courbe représentative.</p>
+<p class=solid> Étudier les variations et la convexité, de la fonction \(f\) définie sur \(]-\infty ; -3[ \cup ]-3 ; +\infty[\) par \(f(x)=\dfrac{2x-1}{x+3}\). Donner les équations des asymptotes à sa courbe représentative.</p>
 
 
 <details class="style-2"><summary>Solution</summary>
