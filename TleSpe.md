@@ -7,7 +7,7 @@ mathjax: true
 Étudier les variations et la convexité de la fonction \\(f\\) définie sur \\(\mathbb{R}\\) par \\(f(x)=x e^{x^2}\\).
 
 
-<details><summary>Solution</summary>
+<details class="style-2"><summary>Solution</summary>
 
 On détermine les limites de \(f\) aux bornes de son ensemble de définition par composées et produits de foncitons usuelles. On obtient :
 
