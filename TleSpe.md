@@ -25,7 +25,7 @@ Puisque pour tout \(x \in \mathbb{R}\) on a \(e^{x^2} >0\) et \(2x^2+1 >0\), on 
 
 On détermine la convexité de \(f\) en étudiant le signe de sa dérivée seconde \(f''\). La fonction \(f\) est deux fois dérivable et pour tout réel \(x\), on a :
 
-$$f''(x)=2x(2x^2+3)\e^{x^2}.$$
+$$f''(x)=2x(2x^2+3)e^{x^2}.$$
 
 Le signe de \(f''(x)\) sur \(\mathbb{R}\) étant déterminé par celui de \(2x\), on en déduit son tableau de signes :
 
