@@ -19,6 +19,9 @@ Puisque pour tout \(x \in \mathbb{R}\) on a \(e^{x^2} >0\) et \(2x^2+1 >0\), on 
 ![Variations de \(f\)](https://AlanPll.github.io/assets/img/var_ex1.png')
 
 
+<IMG src="/assets/img/var_ex1.png"  alt="Var.png"/>
+
+
 </details>
 
 
