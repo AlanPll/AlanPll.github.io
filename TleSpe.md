@@ -4,7 +4,7 @@ subtitle: Exercices d'entraînement
 mathjax: true
 ---
 
-Étudier les variations et la convexité de la fonction \\(f\\) définie sur \\(\mathbb{R}\\) par \\(f(x)=x e^{x^2}\\).
+<p class=solid> Étudier les variations et la convexité de la fonction \\(f\\) définie sur \\(\mathbb{R}\\) par \\(f(x)=x e^{x^2}\\).</p>
 
 
 <details class="style-2"><summary>Solution</summary>
