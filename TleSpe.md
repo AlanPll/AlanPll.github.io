@@ -11,7 +11,7 @@ mathjax: true
 
 On détermine les limites de \(f\) aux bornes de son ensemble de définition par composées et produits de foncitons usuelles. On obtient :
 
-$$\lim_{x \to -\infty} f(x)=-\infty \text{et} \lim_{x \to +\infty} f(x)=+\infty $$.
+$$\lim_{x \to -\infty} f(x)=-\infty \text{et} \lim_{x \to +\infty} f(x)=+\infty.$$
 
 D'autre part la fonction \(f\) est dérivable sur \(\mathbb{R}\) comme produit et composée de fonctions dérivables sur \(\mathbb{R}\) et, pour tout réel \(x\), on a :
 
