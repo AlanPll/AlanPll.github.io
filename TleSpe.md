@@ -15,7 +15,7 @@ $$f'(x)=e^{x^2}(2x^2+1).$$
 Puisque pour tout \(x \in \mathbb{R}\) on a \(e^{x^2} >0\) et \(2x^2+1 >0\), on en déduit le signe de \(f'(x)\) et les variations de \(f\) sur \(\mathbb{R}\) :
 
 
-![Variations de \(f\)]({{ '/assets/img/var_ex1.png' | relative_url }})
+![Variations de \(f\)](/assets/img/var_ex1.png')
 
 
 
