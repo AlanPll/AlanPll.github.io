@@ -5,6 +5,9 @@ mathjax: true
 ---
 
 Étudier les variations et la convexité de la fonction définie sur \\(\mathbb{R}\\) par \\(f(x)=x e^{x^2}\\).
+
+![Variations de \(f\)]({{ '/assets/img/var_ex1.png' | relative_url }})
+
 <details><summary>Solution</summary>
 
 La fonction \(f\) est dérivable sur \(\mathbb{R}\) comme produit et composée de fonctions dérivables sur \(\mathbb{R}\) et, pour tout réel \(x\), on a :
