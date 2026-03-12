@@ -36,4 +36,13 @@ Le signe de \(f''(x)\) sur \(\mathbb{R}\) étant déterminé par celui de \(2x\)
 Finalement la fonction \(f\) est concave sur \(]-\infty ; 0[\) et convexe sur \(]0;+\infty[\). La courbe représentative de \(f\) admet un point d'inflexion en son point d'abscisse 0.
 </details>
 
+<p class=solid> Montrer que pour tout réel \(x\), </p>
+
+
+<details class="style-2"><summary>Solution</summary>
+
+
+</details>
+
+
 
