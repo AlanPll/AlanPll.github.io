@@ -13,7 +13,7 @@
 title: Page personnelle
 
 # Your name to show in the footer
-author: Prof Nu
+author: ALan Pellé
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -22,7 +22,7 @@ author: Prof Nu
 navbar-links:
   About Me: "aboutme"
   Terminale Spécialité :
-    - Chapitre 1 : "https://AlanPll.github.io/TleSPé/Chap1"
+    - 1 - Récurrence : "https://AlanPll.github.io/TleSPé/Chap1"
     - Fonctions: "https://AlanPll.github.io/TleSpeFonctions"
     - Probabilités:
   Cahiers de calcul pour le lycée: "https://colasbd.github.io/"
