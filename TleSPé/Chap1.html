@@ -44,17 +44,17 @@
       margin: 80px 0;
     }
 
-    .boutons button {
+    .boutons a {
+      display: inline-block;
       padding: 12px 25px;
       font-size: 16px;
-      cursor: pointer;
-      border: none;
+      text-decoration: none;
       border-radius: 6px;
       background-color: #333;
       color: white;
     }
 
-    .boutons button:hover {
+    .boutons a:hover {
       background-color: #555;
     }
 
@@ -81,12 +81,11 @@
       <p>1858-1932</p>
     </div>
   </header>
-
   <main>
     <section class="boutons">
-      <a href="CoursChap1.pdf">Cours</a>
-      <button onclick="alert('Bouton 2 cliqué')">Bouton 2</button>
-      <button onclick="alert('Bouton 3 cliqué')">Bouton 3</button>
+      <a href="CoursChap1.pdf">Lien 1</a>
+      <a href="page2.html">Lien 2</a>
+      <a href="page3.html">Lien 3</a>
     </section>
 
     <section class="complements">
