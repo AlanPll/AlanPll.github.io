@@ -25,6 +25,8 @@ navbar-links:
     - 1 - Récurrence : "https://AlanPll.github.io/TleSPé/Chap1"
     # - Fonctions: "https://AlanPll.github.io/TleSpeFonctions"
     # - Probabilités:
+  Maths Expertes :
+    - 1 - Découverte des nombres complexes : "https://AlanPll.github.io/Exp/Chap1"
   Seconde :
     - 1 - Nombres et intervalles : "https://AlanPll.github.io/Seconde/Chap1"
   Cahiers de calcul pour le lycée: "https://colasbd.github.io/"
