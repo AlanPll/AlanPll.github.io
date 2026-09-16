@@ -28,6 +28,7 @@ navbar-links:
     # - Probabilités:
   Terminale STMG :
     - 1 - Suites arithmétiques : "https://AlanPll.github.io/TleSTMG/Chap1"
+    - 2 - Probabilités conditionnelles : "https://AlanPll.github.io/TleSTMG/Chap2"
   Maths Expertes :
     - 1 - Découverte des nombres complexes : "https://AlanPll.github.io/Exp/Chap1"
   Seconde :
