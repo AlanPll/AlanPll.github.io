@@ -80,7 +80,7 @@ subtitle: Limites de suites
 <body>
 
   <header class="portrait">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Karl_Weierstrass_Portrait.jpg?width=300" alt="Portrait">
+    <img id="portrait-img" alt="Portrait de Karl Weierstrass">
     <div class="infos">
        <h1><a href="https://fr.wikipedia.org/wiki/Karl_Weierstrass">Karl Weierstrass</a></h1>
       <p>1815 - 1897</p>
@@ -105,5 +105,15 @@ subtitle: Limites de suites
     
   </main>
   
+<script>
+  // Portrait : image principale de l'article français de Wikipédia
+  fetch("https://fr.wikipedia.org/api/rest_v1/page/summary/Karl_Weierstrass")
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var src = d.thumbnail && d.thumbnail.source;
+      if (src && /^https:\/\//.test(src)) document.getElementById("portrait-img").src = src;
+    })
+    .catch(function () {});
+</script>
 </body>
 </html>
