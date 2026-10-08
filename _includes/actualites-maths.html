@@ -5,10 +5,11 @@
 </aside>
 <script>
 (function () {
-  var QUERY = '(mathématiques OR mathématicien OR "médaille Fields" OR "prix Abel") -site:education.gouv.fr -site:openai.com when:14d';
+  var QUERY = '(mathématiques OR mathématicien OR "médaille Fields" OR "prix Abel") when:14d';
   var RSS = 'https://news.google.com/rss/search?q=' + encodeURIComponent(QUERY) + '&hl=fr&gl=FR&ceid=FR:fr';
   var API = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS);
-  var CLE = 'actu-maths-v2', DUREE = 3600 * 1000, NB = 4;
+  var CLE = 'actu-maths-v3', DUREE = 3600 * 1000, NB = 4;
+  var EXCLUS = /education\.gouv|éducation nationale|openai/i;
   var box = document.querySelector('.actu-maths');
   var ul = document.getElementById('actu-maths-liste');
 
@@ -41,13 +42,14 @@
 
   fetch(API).then(function (r) { return r.json(); }).then(function (d) {
     if (d.status !== 'ok') throw new Error('flux indisponible');
-    var items = d.items.filter(function (i) { return /^https?:\/\//.test(i.link); }).map(function (i) {
+    var items = d.items.filter(function (i) { return /^https?:\/\//.test(i.link) && !EXCLUS.test(i.title); }).map(function (i) {
       var titre = i.title, source = '', k = titre.lastIndexOf(' - ');
       if (k > 0) { source = titre.slice(k + 3); titre = titre.slice(0, k); }
       var dt = new Date(i.pubDate.replace(' ', 'T') + 'Z');
       return { titre: titre, lien: i.link, source: source,
                date: isNaN(dt) ? '' : dt.toLocaleDateString('fr-FR') };
     });
+    if (!items.length) throw new Error('aucun article');
     try { localStorage.setItem(CLE, JSON.stringify({ t: Date.now(), items: items })); } catch (e) {}
     afficher(items);
   }).catch(function () {
