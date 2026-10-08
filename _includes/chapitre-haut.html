@@ -2,14 +2,7 @@
   En-tête commun des chapitres de Terminale Spécialité : portrait, mathématicien et boutons PDF.
   Paramètres : chap, img, nom, dates, wiki
 {%- endcomment -%}
-<header class="chap-entete">
-  <img src="{{ include.img }}" alt="Portrait de {{ include.nom }}">
-  <div class="chap-infos">
-    <div class="chap-etiquette">Mathématicien du chapitre</div>
-    <h2><a href="{{ include.wiki }}">{{ include.nom }}</a></h2>
-    <p class="chap-dates">{{ include.dates }}</p>
-  </div>
-</header>
+{% include chapitre-entete.html img=include.img nom=include.nom dates=include.dates wiki=include.wiki %}
 
 <section class="chap-boutons">
   <a href="CoursChap{{ include.chap }}.pdf"><i class="fa-solid fa-book-open"></i> Cours</a>

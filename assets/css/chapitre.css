@@ -46,13 +46,15 @@
 .chap-carte a[href$=".pdf"]::before,
 .chap-carte a[href*="youtube"]::before,
 .chap-carte a[href*="podcast"]::before,
-.chap-carte a[href*="franceculture"]::before {
+.chap-carte a[href*="franceculture"]::before,
+.chap-carte a[href*="radiofrance"]::before {
   font-family: "Font Awesome 6 Free"; font-weight: 900; margin-right: .45em; color: var(--mid-col);
 }
 .chap-carte a[href$=".pdf"]::before { content: "\f1c1"; }
 .chap-carte a[href*="youtube"]::before { content: "\f03d"; }
 .chap-carte a[href*="podcast"]::before,
-.chap-carte a[href*="franceculture"]::before { content: "\f025"; }
+.chap-carte a[href*="franceculture"]::before,
+.chap-carte a[href*="radiofrance"]::before { content: "\f025"; }
 
 @media (max-width: 600px) {
   .chap-entete { flex-direction: column; text-align: center; }

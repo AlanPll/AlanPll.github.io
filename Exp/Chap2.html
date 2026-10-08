@@ -1,116 +1,32 @@
 ---
 title: Chapitre 2
 subtitle: Divisibilité et congruences dans ℤ
+css:
+  - "/assets/css/chapitre.css"
 ---
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="chap">
+  {% include chapitre-entete.html img="https://upload.wikimedia.org/wikipedia/commons/9/9b/Carl_Friedrich_Gauss.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" nom="Carl Friedrich Gauss" dates="1777 - 1855" wiki="https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss" %}
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 30px;
-      background-color: #f5f5f5;
-    }
+  <section class="chap-boutons">
+    <a href="CoursChap2.pdf"><i class="fa-solid fa-book-open"></i> Cours</a>
+    <a href="ExoChap2.pdf"><i class="fa-solid fa-pencil"></i> Exercices</a>
+    <a href="SupChap2.pdf"><i class="fa-solid fa-graduation-cap"></i> Vers le supérieur</a>
+  </section>
 
-    .portrait {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .portrait img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 2px solid #333;
-    }
-
-    .infos h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    .infos p {
-      margin: 5px 0 0;
-      color: #555;
-    }
-
-    .boutons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 80px 0;
-    }
-
-    .boutons a {
-      display: inline-block;
-      padding: 15px 32px;
-      font-size: 16px;
-      text-decoration: none;
-      border-radius: 6px;
-      background-color: #5C5B58;
-      color: white;
-    }
-
-    .boutons a:hover {
-      background-color: #555;
-    }
-
-    .complements {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    .complements h2 {
-      margin-top: 0;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header class="portrait">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Carl_Friedrich_Gauss.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="Portrait">
-    <div class="infos">
-       <h1><a href="https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss">Carl Friedrich Gauss</a></h1>
-      <p>1777 - 1855</p>
-    </div>
-  </header>
-  <main>
-    
-    <section class="boutons">
-      <a href="CoursChap2.pdf">Cours</a>
-      <a href="ExoChap2.pdf">Exercices</a>
-      <a href="SupChap2.pdf">Vers le supérieur</a>
-    </section>
-
-    <section class="complements">
-      <h2>Pour approfondir</h2>
+  <div class="chap-cartes">
+    <section class="chap-carte">
+      <h3>Pour approfondir</h3>
       <ul>
-          <li><a href="https://www.bnf.fr/fr/mediatheque/cf-gauss-et-les-debuts-de-la-theorie-des-nombres-moderne">Les débuts de l'arithmétique moderne - Conférence de Jean-Benoît Bost.</a></li>
+        <li><a href="https://www.bnf.fr/fr/mediatheque/cf-gauss-et-les-debuts-de-la-theorie-des-nombres-moderne">Les débuts de l'arithmétique moderne - Conférence de Jean-Benoît Bost.</a></li>
       </ul>
     </section>
-
-    <section class="complements">
-      <h2>Compléments historiques</h2>
+    <section class="chap-carte">
+      <h3>Compléments historiques</h3>
       <ul>
-          <li><a href="https://www.apmep.fr/IMG/pdf/AAA03007.pdf">Le problème des restes chinois - APMEP.</a></li>
-          <li><a href="https://www.radiofrance.fr/franceculture/podcasts/sciences-chrono/sciences-chrono-emission-du-vendredi-30-janvier-2026-5278703">Histoire des mathématiques de Chine - Émission "Sciences Chrono" sur France Culture.</a></li>
+        <li><a href="https://www.apmep.fr/IMG/pdf/AAA03007.pdf">Le problème des restes chinois - APMEP.</a></li>
+        <li><a href="https://www.radiofrance.fr/franceculture/podcasts/sciences-chrono/sciences-chrono-emission-du-vendredi-30-janvier-2026-5278703">Histoire des mathématiques de Chine - Émission « Sciences Chrono » sur France Culture.</a></li>
       </ul>
     </section>
-
-    
-  </main>
-  
-</body>
-</html>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{%- comment -%}
+  Carte d'en-tête d'un chapitre : portrait, nom (lien Wikipédia) et dates.
+  Paramètres : img, nom, dates, wiki
+{%- endcomment -%}
+<header class="chap-entete">
+  <img src="{{ include.img }}" alt="Portrait de {{ include.nom }}">
+  <div class="chap-infos">
+    <div class="chap-etiquette">Figure du chapitre</div>
+    <h2><a href="{{ include.wiki }}">{{ include.nom }}</a></h2>
+    <p class="chap-dates">{{ include.dates }}</p>
+  </div>
+</header>

@@ -1,117 +1,28 @@
 ---
 title: Chapitre 2
 subtitle: Probabilités conditionnelles
+css:
+  - "/assets/css/chapitre.css"
 ---
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="chap">
+  {% include chapitre-entete.html img="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Nicolas_de_Condorcet.PNG/500px-Nicolas_de_Condorcet.PNG?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" nom="Nicolas de Condorcet" dates="1743 - 1794" wiki="https://fr.wikipedia.org/wiki/Nicolas_de_Condorcet" %}
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 30px;
-      background-color: #f5f5f5;
-    }
+  <section class="chap-boutons">
+    <a href="CoursChap2.pdf"><i class="fa-solid fa-book-open"></i> Cours</a>
+    <a href="ExoChap2.pdf"><i class="fa-solid fa-pencil"></i> Exercices</a>
+  </section>
 
-    .portrait {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .portrait img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 2px solid #333;
-    }
-
-    .infos h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    .infos p {
-      margin: 5px 0 0;
-      color: #555;
-    }
-
-    .boutons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 80px 0;
-    }
-
-    .boutons a {
-      display: inline-block;
-      padding: 15px 32px;
-      font-size: 16px;
-      text-decoration: none;
-      border-radius: 6px;
-      background-color: #5C5B58;
-      color: white;
-    }
-
-    .boutons a:hover {
-      background-color: #555;
-    }
-
-    .complements {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    .complements h2 {
-      margin-top: 0;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header class="portrait">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Nicolas_de_Condorcet.PNG/500px-Nicolas_de_Condorcet.PNG?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Portrait">
-    <div class="infos">
-       <h1><a href="https://fr.wikipedia.org/wiki/Nicolas_de_Condorcet">Nicolas de Condorcet</a></h1>
-      <p>1743 - 1794</p>
-    </div>
-  </header>
-  <main>
-    
-    <section class="boutons">
-      <a href="CoursChap2.pdf">Cours</a>
-      <a href="ExoChap2.pdf">Exercices</a>
-    </section>
-
-    <section class="complements">
-      <h2>Pour approfondir</h2>
+  <div class="chap-cartes">
+    <section class="chap-carte">
+      <h3>Pour approfondir</h3>
       <ul>
-        <li>Formule des probabilités totales</li>
-          <ul><a href="SuppChap2.pdf">Exercice détaillé - Mercatique</a></ul>
+        <li>Formule des probabilités totales
+          <ul>
+            <li><a href="SuppChap2.pdf">Exercice détaillé - Mercatique</a></li>
+          </ul>
+        </li>
       </ul>
     </section>
-
-<!--    <section class="complements">
-      <h2>Compléments historiques</h2>
-      <ul>
-        <li></li>
-          <ul></ul>
-          <ul></ul>
-      </ul>
-    </section>
--->
-    
-  </main>
-  
-</body>
-</html>
+  </div>
+</div>
