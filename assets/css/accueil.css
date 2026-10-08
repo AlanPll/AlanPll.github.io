@@ -1,0 +1,5 @@
+/* Page d'accueil : titre plus discret, sur une seule ligne */
+.intro-header .page-heading h1 {
+  white-space: nowrap;
+  font-size: clamp(0.75rem, calc((100vw - 4rem) / 20.5), 2.125rem);
+}
