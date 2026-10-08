@@ -8,8 +8,8 @@
   var QUERY = '(mathématiques OR mathématicien OR "médaille Fields" OR "prix Abel") when:14d';
   var RSS = 'https://news.google.com/rss/search?q=' + encodeURIComponent(QUERY) + '&hl=fr&gl=FR&ceid=FR:fr';
   var API = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS);
-  var CLE = 'actu-maths-v3', DUREE = 3600 * 1000, NB = 4;
-  var EXCLUS = /education\.gouv|éducation nationale|openai/i;
+  var CLE = 'actu-maths-v4', DUREE = 3600 * 1000, NB = 4;
+  var EXCLUS = /education\.gouv|éducation nationale|openai|fortuneo/i;
   var box = document.querySelector('.actu-maths');
   var ul = document.getElementById('actu-maths-liste');
 
