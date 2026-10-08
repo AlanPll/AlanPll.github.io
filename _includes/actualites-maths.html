@@ -1,15 +1,58 @@
-{% assign actu = site.data.actualites_maths %}
-{% if actu.articles and actu.articles.size > 0 %}
-<aside class="actu-maths" aria-labelledby="actu-maths-titre">
+<aside class="actu-maths" aria-labelledby="actu-maths-titre" hidden>
   <h2 id="actu-maths-titre">À la une des mathématiques</h2>
-  <ul>
-    {% for a in actu.articles %}
-    <li>
-      <a href="{{ a.lien }}" target="_blank" rel="noopener noreferrer">{{ a.titre | escape }}</a>
-      <span class="actu-meta">{{ a.source | escape }} · {{ a.date | date: "%d/%m/%Y" }}</span>
-    </li>
-    {% endfor %}
-  </ul>
-  <p class="actu-maj">Mise à jour automatique le {{ actu.maj | date: "%d/%m/%Y" }}</p>
+  <ul id="actu-maths-liste"></ul>
+  <p class="actu-maj">Actualités mises à jour automatiquement (source : Google Actualités)</p>
 </aside>
-{% endif %}
+<script>
+(function () {
+  var QUERY = '(mathématiques OR mathématicien OR "médaille Fields" OR "prix Abel") when:14d';
+  var RSS = 'https://news.google.com/rss/search?q=' + encodeURIComponent(QUERY) + '&hl=fr&gl=FR&ceid=FR:fr';
+  var API = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS);
+  var CLE = 'actu-maths-v1', DUREE = 3600 * 1000, NB = 6;
+  var box = document.querySelector('.actu-maths');
+  var ul = document.getElementById('actu-maths-liste');
+
+  function afficher(items) {
+    items = items.slice(0, NB);
+    if (!items.length) return;
+    items.forEach(function (it) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = it.lien; a.textContent = it.titre;
+      a.target = '_blank'; a.rel = 'noopener noreferrer';
+      var m = document.createElement('span');
+      m.className = 'actu-meta';
+      m.textContent = it.source + (it.date ? ' · ' + it.date : '');
+      li.appendChild(a); li.appendChild(m); ul.appendChild(li);
+    });
+    box.hidden = false;
+  }
+
+  function lireCache(ignorerAge) {
+    try {
+      var c = JSON.parse(localStorage.getItem(CLE));
+      if (c && c.items && (ignorerAge || Date.now() - c.t < DUREE)) return c.items;
+    } catch (e) {}
+    return null;
+  }
+
+  var cache = lireCache(false);
+  if (cache) return afficher(cache);
+
+  fetch(API).then(function (r) { return r.json(); }).then(function (d) {
+    if (d.status !== 'ok') throw new Error('flux indisponible');
+    var items = d.items.filter(function (i) { return /^https?:\/\//.test(i.link); }).map(function (i) {
+      var titre = i.title, source = '', k = titre.lastIndexOf(' - ');
+      if (k > 0) { source = titre.slice(k + 3); titre = titre.slice(0, k); }
+      var dt = new Date(i.pubDate.replace(' ', 'T') + 'Z');
+      return { titre: titre, lien: i.link, source: source,
+               date: isNaN(dt) ? '' : dt.toLocaleDateString('fr-FR') };
+    });
+    try { localStorage.setItem(CLE, JSON.stringify({ t: Date.now(), items: items })); } catch (e) {}
+    afficher(items);
+  }).catch(function () {
+    var vieux = lireCache(true);
+    if (vieux) afficher(vieux);
+  });
+})();
+</script>

@@ -18,3 +18,4 @@
 .actu-maths li { margin-bottom: .6rem; }
 .actu-maths .actu-meta { display: block; font-size: .8rem; color: #6a737d; }
 .actu-maths .actu-maj { margin: .75rem 0 0; font-size: .75rem; color: #6a737d; }
+.actu-maths[hidden] { display: none; }
