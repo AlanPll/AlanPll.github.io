@@ -1,0 +1,34 @@
+---
+title: Chapitre N
+subtitle: Titre du chapitre
+css:
+  - "/assets/css/chapitre.css"
+---
+{%- comment -%}
+  MODÈLE pour un nouveau chapitre de Terminale Spécialité (le dossier _modeles n'est pas publié).
+  1. Copier ce fichier dans TleSPé/ sous le nom ChapN.html.
+  2. Remplacer N (titre, chap=, frise), l'image, le nom, les dates et le lien Wikipédia.
+  3. Déposer CoursChapN.pdf, EchauffChapN.pdf et ExoChapN.pdf dans le dossier TleSPé/ChapN/.
+  4. Renseigner le titre et l'url du chapitre dans _data/tle_spe.yml, et l'ajouter au menu (_config.yml).
+{%- endcomment -%}
+
+<div class="chap">
+  {% include chapitre-haut.html chap=N img="URL_DE_L_IMAGE" nom="Prénom Nom" dates="1800 - 1900" wiki="https://fr.wikipedia.org/wiki/Prénom_Nom" %}
+
+  <div class="chap-cartes">
+    <section class="chap-carte">
+      <h3>Pour approfondir</h3>
+      <ul>
+        <li><a href="ApproChapN.pdf">Titre de l'approfondissement</a></li>
+      </ul>
+    </section>
+    <section class="chap-carte">
+      <h3>Compléments historiques</h3>
+      <ul>
+        <li><a href="https://fr.wikipedia.org/wiki/...">Titre du lien</a></li>
+      </ul>
+    </section>
+  </div>
+
+  {% include frise-tle-spe.html chap=N %}
+</div>
