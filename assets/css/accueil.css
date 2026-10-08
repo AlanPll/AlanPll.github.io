@@ -7,15 +7,29 @@
 /* Encadré d'actualité mathématique */
 .actu-maths {
   margin: 1.5rem 0;
-  padding: 1rem 1.25rem;
-  border: 1px solid #d0d7de;
-  border-left: 4px solid #0085a1;
-  border-radius: 6px;
-  background: #f6f8fa;
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 55%, #0085a1 100%);
+  box-shadow: 0 6px 18px rgba(30, 60, 114, .3);
 }
-.actu-maths h2 { margin: 0 0 .75rem; font-size: 1.3rem; }
-.actu-maths ul { margin: 0; padding-left: 1.2rem; }
-.actu-maths li { margin-bottom: .6rem; }
-.actu-maths .actu-meta { display: block; font-size: .8rem; color: #6a737d; }
-.actu-maths .actu-maj { margin: .75rem 0 0; font-size: .75rem; color: #6a737d; }
 .actu-maths[hidden] { display: none; }
+.actu-maths h2 {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  color: #fff;
+}
+.actu-maths h2::before { content: "\2211\00a0"; color: #ffd166; }
+.actu-maths ul { margin: 0; padding: 0; list-style: none; }
+.actu-maths li {
+  margin-bottom: .6rem;
+  padding: .6rem .9rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .14);
+  transition: background .2s;
+}
+.actu-maths li:hover { background: rgba(255, 255, 255, .25); }
+.actu-maths li a { color: #fff; font-weight: 600; text-decoration: none; }
+.actu-maths li a:hover { color: #ffd166; text-decoration: underline; }
+.actu-maths .actu-meta { display: block; margin-top: .15rem; font-size: .8rem; color: rgba(255, 255, 255, .8); }
+.actu-maths .actu-maj { margin: .75rem 0 0; font-size: .75rem; color: rgba(255, 255, 255, .75); text-align: right; }
