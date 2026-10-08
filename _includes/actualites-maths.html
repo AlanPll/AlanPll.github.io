@@ -1,0 +1,15 @@
+{% assign actu = site.data.actualites_maths %}
+{% if actu.articles and actu.articles.size > 0 %}
+<aside class="actu-maths" aria-labelledby="actu-maths-titre">
+  <h2 id="actu-maths-titre">À la une des mathématiques</h2>
+  <ul>
+    {% for a in actu.articles %}
+    <li>
+      <a href="{{ a.lien }}" target="_blank" rel="noopener noreferrer">{{ a.titre | escape }}</a>
+      <span class="actu-meta">{{ a.source | escape }} · {{ a.date | date: "%d/%m/%Y" }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="actu-maj">Mise à jour automatique le {{ actu.maj | date: "%d/%m/%Y" }}</p>
+</aside>
+{% endif %}
