@@ -1,0 +1,20 @@
+# Chapitres du programme de Terminale Spécialité (13 au total).
+# Pour nommer un chapitre, renseigner "titre". Pour en faire un lien, renseigner "url".
+chapitres:
+  - titre: "Récurrence"
+    url: "/TleSPé/Chap1"
+  - titre: "Dérivation et compléments"
+    url: "/TleSPé/Chap2"
+  - titre: "Dénombrement"
+    url: "/TleSPé/Chap3"
+  - titre: "Limites de suites"
+    url: "/TleSPé/Chap4"
+  - titre: ""
+  - titre: ""
+  - titre: ""
+  - titre: ""
+  - titre: ""
+  - titre: ""
+  - titre: ""
+  - titre: ""
+  - titre: ""

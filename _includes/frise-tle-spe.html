@@ -1,0 +1,47 @@
+{%- comment -%}
+  Frise de progression Terminale Spécialité.
+  Usage : include frise-tle-spe.html avec le paramètre chap (numéro du chapitre en cours)
+  Les chapitres avant "chap" sont terminés, "chap" est le chapitre en cours, les suivants sont à venir.
+{%- endcomment -%}
+{% assign chapitres = site.data.tle_spe.chapitres %}
+<nav class="frise" aria-label="Progression dans le programme de Terminale Spécialité">
+  <h2 class="frise-titre">Où en sommes-nous ? <span>Chapitre {{ include.chap }} sur {{ chapitres.size }}</span></h2>
+  <ol class="frise-liste">
+    {% for c in chapitres %}
+      {% assign n = forloop.index %}
+      {% if n < include.chap %}{% assign etat = "fait" %}
+      {% elsif n == include.chap %}{% assign etat = "en-cours" %}
+      {% else %}{% assign etat = "a-venir" %}{% endif %}
+      <li class="frise-etape {{ etat }}"{% if etat == "en-cours" %} aria-current="step"{% endif %}>
+        <span class="frise-point">{% if etat == "fait" %}&#10003;{% else %}{{ n }}{% endif %}</span>
+        <span class="frise-label">
+          {% assign nom = c.titre %}{% if nom == "" or nom == nil %}{% assign nom = "Chapitre " | append: n %}{% endif %}
+          {% if c.url and etat == "fait" %}<a href="{{ c.url | relative_url }}">{{ nom }}</a>{% else %}{{ nom }}{% endif %}
+        </span>
+      </li>
+    {% endfor %}
+  </ol>
+</nav>
+<style>
+  .frise { max-width: 1000px; margin: 60px auto 20px; padding: 20px; background: white; border-radius: 8px; }
+  .frise-titre { margin: 0 0 22px; font-size: 1.1rem; text-align: center; }
+  .frise-titre span { display: block; margin-top: 4px; font-size: .85rem; font-weight: normal; color: #777; }
+  .frise-liste { display: flex; list-style: none; margin: 0; padding: 0; }
+  .frise-etape { position: relative; flex: 1 1 0; min-width: 0; text-align: center; padding: 0 2px; }
+  .frise-etape::before { content: ""; position: absolute; top: 14px; left: -50%; width: 100%; height: 3px; background: #ddd; z-index: 0; }
+  .frise-etape:first-child::before { display: none; }
+  .frise-etape.fait::before, .frise-etape.en-cours::before { background: #5C5B58; }
+  .frise-point { position: relative; z-index: 1; display: inline-block; width: 30px; height: 30px; line-height: 26px; box-sizing: border-box;
+    border-radius: 50%; border: 2px solid #ddd; background: white; color: #999; font-size: .8rem; font-weight: bold; }
+  .frise-etape.fait .frise-point { background: #5C5B58; border-color: #5C5B58; color: white; }
+  .frise-etape.en-cours .frise-point { background: #0085a1; border-color: #0085a1; color: white; box-shadow: 0 0 0 4px rgba(0, 133, 161, .25); }
+  .frise-label { display: block; margin-top: 8px; font-size: .7rem; line-height: 1.2; color: #999; overflow-wrap: anywhere; }
+  .frise-etape.fait .frise-label { color: #404040; }
+  .frise-etape.en-cours .frise-label { color: #0085a1; font-weight: bold; }
+  @media (max-width: 700px) {
+    .frise-liste { flex-direction: column; }
+    .frise-etape { display: flex; align-items: center; gap: 12px; text-align: left; padding: 0 0 14px; }
+    .frise-etape::before { top: -14px; left: 14px; width: 3px; height: 100%; }
+    .frise-label { margin: 0; font-size: .9rem; }
+  }
+</style>
