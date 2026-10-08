@@ -1,0 +1,61 @@
+/* Pages de chapitre (Terminale Spécialité) : style commun, couleurs du thème */
+.chap { max-width: 1000px; margin: 0 auto; }
+
+/* En-tête : numéro, mathématicien */
+.chap-entete {
+  display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap;
+  margin: 10px 0 28px; padding: 20px 26px;
+  background: var(--page-col); border: 1px solid var(--navbar-border-col);
+  border-left: 5px solid var(--hover-col); border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+.chap-entete img {
+  width: 110px; height: 110px; object-fit: cover; object-position: top;
+  border-radius: 50%; border: 3px solid var(--navbar-col);
+  box-shadow: 0 0 0 1px var(--navbar-border-col);
+}
+.chap-infos { text-align: left; }
+.chap-etiquette { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--mid-col); }
+.chap-infos h2 { margin: 2px 0; font-size: 1.5rem; }
+.chap-infos h2 a { color: var(--text-col); }
+.chap-infos h2 a:hover { color: var(--hover-col); }
+.chap-dates { margin: 0; color: var(--mid-col); }
+
+/* Boutons PDF */
+.chap-boutons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 0 0 34px; }
+.chap-boutons a {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px; font-size: 1rem; text-decoration: none;
+  border-radius: 12px; color: #fff; background: #5C5B58;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
+  transition: transform .15s, background .15s, box-shadow .15s;
+}
+.chap-boutons a:hover { background: var(--hover-col); color: #fff; transform: translateY(-2px); box-shadow: 0 5px 12px rgba(0, 0, 0, .22); }
+
+/* Cartes */
+.chap-cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: start; }
+.chap-carte {
+  padding: 18px 22px;
+  background: var(--page-col); border: 1px solid var(--navbar-border-col);
+  border-left: 5px solid var(--hover-col); border-radius: 18px;
+}
+.chap-carte h3 { margin: 0 0 12px; font-size: 1.2rem; }
+.chap-carte ul { margin: 0; padding-left: 1.1rem; }
+.chap-carte li { margin-bottom: .4rem; }
+.chap-carte ul ul { margin-top: .3rem; list-style: none; padding-left: .4rem; }
+.chap-carte a[href$=".pdf"]::before,
+.chap-carte a[href*="youtube"]::before,
+.chap-carte a[href*="podcast"]::before,
+.chap-carte a[href*="franceculture"]::before {
+  font-family: "Font Awesome 6 Free"; font-weight: 900; margin-right: .45em; color: var(--mid-col);
+}
+.chap-carte a[href$=".pdf"]::before { content: "\f1c1"; }
+.chap-carte a[href*="youtube"]::before { content: "\f03d"; }
+.chap-carte a[href*="podcast"]::before,
+.chap-carte a[href*="franceculture"]::before { content: "\f025"; }
+
+@media (max-width: 600px) {
+  .chap-entete { flex-direction: column; text-align: center; }
+  .chap-infos { text-align: center; }
+  .chap-boutons a { width: 100%; justify-content: center; }
+}
