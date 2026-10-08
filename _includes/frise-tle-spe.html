@@ -5,7 +5,7 @@
 {%- endcomment -%}
 {% assign chapitres = site.data.tle_spe.chapitres %}
 <nav class="frise" aria-label="Progression dans le programme de Terminale Spécialité">
-  <h2 class="frise-titre">Où en sommes-nous ? <span>Chapitre {{ include.chap }} sur {{ chapitres.size }}</span></h2>
+  <h2 class="frise-titre">Progression de l'année <span>Chapitre {{ include.chap }} sur {{ chapitres.size }}</span></h2>
   <ol class="frise-liste">
     {% for c in chapitres %}
       {% assign n = forloop.index %}
@@ -20,6 +20,10 @@
         </span>
       </li>
     {% endfor %}
+      <li class="frise-etape bac">
+        <span class="frise-point">&#9733;</span>
+        <span class="frise-label">Bac</span>
+      </li>
   </ol>
 </nav>
 <style>
@@ -35,6 +39,8 @@
     border-radius: 50%; border: 2px solid #ddd; background: white; color: #999; font-size: .8rem; font-weight: bold; }
   .frise-etape.fait .frise-point { background: #5C5B58; border-color: #5C5B58; color: white; }
   .frise-etape.en-cours .frise-point { background: #0085a1; border-color: #0085a1; color: white; box-shadow: 0 0 0 4px rgba(0, 133, 161, .25); }
+  .frise-etape.bac .frise-point { background: #d9232d; border-color: #d9232d; color: white; }
+  .frise-etape.bac .frise-label { color: #d9232d; font-weight: bold; }
   .frise-label { display: block; margin-top: 8px; font-size: .7rem; line-height: 1.2; color: #999; overflow-wrap: anywhere; }
   .frise-etape.fait .frise-label { color: #404040; }
   .frise-etape.en-cours .frise-label { color: #0085a1; font-weight: bold; }
