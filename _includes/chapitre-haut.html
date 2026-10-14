@@ -20,8 +20,8 @@
 {%- assign a_corr_echauff = false -%}
 {%- assign a_corr_exo = false -%}
 {%- for f in site.static_files -%}
-  {%- if f.relative_path == chemin_corr_echauff -%}{%- assign a_corr_echauff = true -%}{%- endif -%}
-  {%- if f.relative_path == chemin_corr_exo -%}{%- assign a_corr_exo = true -%}{%- endif -%}
+  {%- if f.path == chemin_corr_echauff -%}{%- assign a_corr_echauff = true -%}{%- endif -%}
+  {%- if f.path == chemin_corr_exo -%}{%- assign a_corr_exo = true -%}{%- endif -%}
 {%- endfor -%}
 
 {% if a_corr_echauff or a_corr_exo %}
