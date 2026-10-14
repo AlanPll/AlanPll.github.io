@@ -1,6 +1,8 @@
 {%- comment -%}
   En-tête commun des chapitres de Terminale Spécialité : portrait, mathématicien et boutons PDF.
   Paramètres : chap, img, nom, dates, wiki
+  Les boutons de correction s'affichent tout seuls dès que les fichiers
+  CorrectionEchauffChapN.pdf et/ou CorrigeExoChapN.pdf sont déposés dans le dossier du chapitre.
 {%- endcomment -%}
 {% include chapitre-entete.html img=include.img nom=include.nom dates=include.dates wiki=include.wiki %}
 
@@ -9,3 +11,22 @@
   <a href="EchauffChap{{ include.chap }}.pdf"><i class="fa-solid fa-bolt"></i> Échauffement</a>
   <a href="ExoChap{{ include.chap }}.pdf"><i class="fa-solid fa-pencil"></i> Exercices</a>
 </section>
+
+{%- assign dossier_chap = page.path | remove: ".html" | prepend: "/" | append: "/" -%}
+{%- assign nom_corr_echauff = "CorrectionEchauffChap" | append: include.chap | append: ".pdf" -%}
+{%- assign nom_corr_exo = "CorrigeExoChap" | append: include.chap | append: ".pdf" -%}
+{%- assign chemin_corr_echauff = dossier_chap | append: nom_corr_echauff -%}
+{%- assign chemin_corr_exo = dossier_chap | append: nom_corr_exo -%}
+{%- assign a_corr_echauff = false -%}
+{%- assign a_corr_exo = false -%}
+{%- for f in site.static_files -%}
+  {%- if f.relative_path == chemin_corr_echauff -%}{%- assign a_corr_echauff = true -%}{%- endif -%}
+  {%- if f.relative_path == chemin_corr_exo -%}{%- assign a_corr_exo = true -%}{%- endif -%}
+{%- endfor -%}
+
+{% if a_corr_echauff or a_corr_exo %}
+<section class="chap-boutons chap-corrections" aria-label="Corrections">
+  {% if a_corr_echauff %}<a href="{{ nom_corr_echauff }}"><i class="fa-solid fa-circle-check"></i> Correction de l'échauffement</a>{% endif %}
+  {% if a_corr_exo %}<a href="{{ nom_corr_exo }}"><i class="fa-solid fa-circle-check"></i> Correction des exercices</a>{% endif %}
+</section>
+{% endif %}

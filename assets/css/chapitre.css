@@ -32,6 +32,14 @@
 }
 .chap-boutons a:hover { background: var(--hover-col); color: #fff; transform: translateY(-2px); box-shadow: 0 5px 12px rgba(0, 0, 0, .22); }
 
+/* Boutons de correction : même forme, version contour, juste sous les boutons principaux */
+.chap-boutons:has(+ .chap-corrections) { margin-bottom: 16px; }
+.chap-corrections a {
+  padding: 12px 26px; color: #5C5B58; background: var(--page-col);
+  border: 2px solid #5C5B58; box-shadow: none;
+}
+.chap-corrections a:hover { border-color: var(--hover-col); }
+
 /* Cartes */
 .chap-cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: start; }
 .chap-carte {
