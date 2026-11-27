@@ -1,10 +1,14 @@
 {%- comment -%}
   Carte d'en-tête d'un chapitre : portrait, nom (lien Wikipédia) et dates.
-  Paramètres : img, nom, dates, wiki, alt (facultatif)
+  Paramètres : img, nom, dates, wiki, alt (facultatif). Sans img, un cercle avec les initiales est affiché (paramètre initiales).
 {%- endcomment -%}
 <header class="chap-entete">
+  {%- if include.img %}
   {%- if include.alt %}{% assign alt_img = include.alt %}{% else %}{% assign alt_img = "Portrait de " | append: include.nom %}{% endif %}
   <img src="{{ include.img }}" alt="{{ alt_img }}">
+  {%- else %}
+  <div class="chap-initiales" aria-hidden="true">{{ include.initiales }}</div>
+  {%- endif %}
   <div class="chap-infos">
     <div class="chap-etiquette">Figure du chapitre</div>
     <h2><a href="{{ include.wiki }}">{{ include.nom }}</a></h2>

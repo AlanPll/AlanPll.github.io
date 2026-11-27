@@ -69,3 +69,12 @@
   .chap-infos { text-align: center; }
   .chap-boutons a { width: 100%; justify-content: center; }
 }
+
+/* Cercle d'initiales quand aucun portrait n'est disponible */
+.chap-initiales {
+  width: 110px; height: 110px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.2rem; font-weight: 600; letter-spacing: .05em;
+  color: var(--page-col); background: var(--hover-col);
+  border: 3px solid var(--navbar-col); box-shadow: 0 0 0 1px var(--navbar-border-col);
+}
